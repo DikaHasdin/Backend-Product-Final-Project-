@@ -45,7 +45,7 @@ const readWarnaProductProduct = async (req, res) => {
 
 const readGambarProduct = async (req, res) => {
     const idProduct = req.params.id
-    const allProduct = await knex.select().from('gambar_product').where('id_warna_product',idProduct)
+    const allProduct = await knex.select().from('gambar_product')
 
     if(allProduct.length == 0){
         return res.send({
